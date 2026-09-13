@@ -1,10 +1,10 @@
 services:
-  app:
+  web_app:
     build: .
     ports:
       - "8000:8000"
     volumes:
-      - ./logs:/app/logs
+      - ./logs:/web_app/logs
     deploy:
       resources:
         limits:
@@ -16,7 +16,7 @@ services:
     volumes:
       - ./logs:/logs
     depends_on:
-      - app
+      - web_app
     deploy:
       resources:
         limits:

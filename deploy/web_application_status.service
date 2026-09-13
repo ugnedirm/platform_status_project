@@ -1,5 +1,5 @@
 [Unit]
-Description=Platform Status Docker Compose App
+Description=Web application status monitor
 
 [Service]
 WorkingDirectory=/path/to/platform-status

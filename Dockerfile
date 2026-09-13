@@ -1,7 +1,7 @@
 FROM python:3.12-slim
-WORKDIR /app
+WORKDIR /web_app
 RUN mkdir logs
-COPY app.py .
+COPY web_app.py .
 RUN pip install flask
 EXPOSE 8000
-CMD ["python", "app.py"]
+CMD ["python", "web_app.py"]
