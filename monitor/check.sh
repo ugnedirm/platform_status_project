@@ -1,7 +1,7 @@
 #!/bin/sh
 while true
 do
-    if curl -sf http://app:8000 > /dev/null
+    if curl -sf http://app:8000/health > /dev/null
     then
         echo "$(date): app is UP" >> /logs/monitor.log
     else
