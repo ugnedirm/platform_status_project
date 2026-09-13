@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./logs:/app/logs
+
+  monitor:
+    build: ./monitor
+    volumes:
+      - ./logs:/logs
+    depends_on:
+      - app
